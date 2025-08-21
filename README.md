@@ -13,3 +13,12 @@ C   C
  B B
   A
 ```
+
+## Start
+
+This project uses Vitest as testing framework.
+
+Run tests
+```sh
+npm test
+```
