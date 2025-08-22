@@ -1,11 +1,11 @@
 import { describe, it, expect } from 'vitest';
 import { Diamond } from '../src/diamond';
 
-describe('Diamond', () => {
+describe('Print Diamond', () => {
 
-    it('create diamond', () => {
-        var diamond = new Diamond();
-        expect(diamond).toBeInstanceOf(Diamond);
+    it('should return A, if A is provided', () => {
+        var diamond = new Diamond('A');
+        expect(diamond.toString()).toEqual('A');
     });
 
 });
