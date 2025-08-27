@@ -8,4 +8,13 @@ describe('Print Diamond', () => {
         expect(diamond.toString()).toEqual('A');
     });
 
+    describe('Line', () => {
+
+        it('should return the line for letter A', () => {
+            var diamond = new Diamond('A');
+            expect(diamond.line('A')).toEqual('A');
+        });
+
+    });
+
 });
