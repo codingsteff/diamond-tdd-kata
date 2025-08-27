@@ -14,4 +14,8 @@ export class Diamond {
         return letter;
     }
 
+    innerSpace(): string {
+        return ' ';
+    }
+
 }
