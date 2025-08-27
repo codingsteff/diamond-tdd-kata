@@ -17,4 +17,13 @@ describe('Print Diamond', () => {
 
     });
 
+    describe('Inner Space', () => {
+
+        it('should return one space, if B is provided', () => {
+            var diamond = new Diamond('A');
+            expect(diamond.innerSpace('B')).toEqual(' ');
+        });
+
+    });
+
 });
