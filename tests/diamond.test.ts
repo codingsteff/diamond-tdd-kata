@@ -27,6 +27,10 @@ describe('Print Diamond', () => {
             expect(diamond.innerSpace('B')).toEqual(' ');
         });
 
+        it('should return three spaces, if C is provided', () => {
+            expect(diamond.innerSpace('C')).toEqual('   ');
+        });
+
     });
 
 });
