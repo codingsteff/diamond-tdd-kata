@@ -10,8 +10,8 @@ export class Diamond {
         return this._letter;
     }
 
-    line(): string {
-        return 'A';
+    line(letter): string {
+        return letter;
     }
 
 }
