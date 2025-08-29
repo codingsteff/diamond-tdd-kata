@@ -35,6 +35,10 @@ describe('Print Diamond', () => {
             expect(diamond.innerSpace('C')).toEqual('   ');
         });
 
+        it('should throw an exception, if 4 is provided', () => {
+            expect(() => diamond.innerSpace('4')).toThrow('Invalid Argument');
+        });
+
     });
 
 });
