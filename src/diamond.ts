@@ -19,7 +19,7 @@ export class Diamond {
         const charCodeA = 'A'.charCodeAt(0);
         const index = charCode - charCodeA;
         const spaces = 2 * index - 1;
-        return ' '.repeat(spaces);
+        return new Array(spaces + 1).join(' ');
     }
 
 }
