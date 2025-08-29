@@ -15,9 +15,11 @@ export class Diamond {
     }
 
     innerSpace(letter): string {
-        if (letter === 'C')
-            return '   '
-        return ' ';
+        const charCode = letter.charCodeAt(0);
+        const charCodeA = 'A'.charCodeAt(0);
+        const index = charCode - charCodeA;
+        const spaces = 2 * index - 1;
+        return ' '.repeat(spaces);
     }
 
 }
