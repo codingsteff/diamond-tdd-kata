@@ -23,6 +23,10 @@ describe('Print Diamond', () => {
 
     describe('Inner Space', () => {
 
+        it('should return an empty string, if A is provided', () => {
+            expect(diamond.innerSpace('A')).toEqual('');
+        });
+
         it('should return one space, if B is provided', () => {
             expect(diamond.innerSpace('B')).toEqual(' ');
         });
