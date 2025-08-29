@@ -14,7 +14,9 @@ export class Diamond {
         return letter;
     }
 
-    innerSpace(): string {
+    innerSpace(letter): string {
+        if (letter === 'C')
+            return '   '
         return ' ';
     }
 
