@@ -26,4 +26,8 @@ export class Diamond {
         return new Array(spaces + 1).join(' ');
     }
 
+    outerSpace(): string {
+        return ' ';
+    }
+
 }
