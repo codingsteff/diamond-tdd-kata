@@ -41,4 +41,12 @@ describe('Print Diamond', () => {
 
     });
 
+    describe('Outer Space', () => {
+
+        it('should return one space, if B is the current line and C is the widest point', () => {
+            expect(diamond.outerSpace('B', 'C')).toEqual(' ');
+        });
+
+    });
+
 });
