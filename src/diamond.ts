@@ -15,7 +15,8 @@ export class Diamond {
     }
 
     innerSpace(letter): string {
-        if (letter === '4')
+        const isValidLetter = /^[A-Z]$/.test(letter);
+        if (!isValidLetter)
             throw new Error('Invalid Argument');
 
         const charCode = letter.charCodeAt(0);
