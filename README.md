@@ -22,3 +22,7 @@ Run tests
 ```sh
 npm test
 ```
+
+## Draft
+
+![Diamond Concept](./doc/concept.png)  
