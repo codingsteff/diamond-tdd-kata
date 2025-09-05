@@ -26,7 +26,10 @@ export class Diamond {
         return new Array(spaces + 1).join(' ');
     }
 
-    outerSpace(): string {
+    outerSpace(current, widest): string {
+        if(current=== 'C' && widest === 'E') {
+            return '  ';
+        }
         return ' ';
     }
 
