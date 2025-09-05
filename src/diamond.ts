@@ -27,10 +27,11 @@ export class Diamond {
     }
 
     outerSpace(current, widest): string {
-        if(current=== 'C' && widest === 'E') {
-            return '  ';
-        }
-        return ' ';
+        var currentIndex = current.charCodeAt(0);
+        var widestIndex = widest.charCodeAt(0);
+        
+        var spaces = widestIndex - currentIndex;
+        return new Array(spaces + 1).join(' ');
     }
 
 }
