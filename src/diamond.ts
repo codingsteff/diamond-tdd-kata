@@ -29,9 +29,13 @@ export class Diamond {
     outerSpace(current, widest): string {
         var currentIndex = current.charCodeAt(0);
         var widestIndex = widest.charCodeAt(0);
-        
+
         var spaces = widestIndex - currentIndex;
         return new Array(spaces + 1).join(' ');
+    }
+
+    getIndexOf(): number {
+        return 1;
     }
 
 }
