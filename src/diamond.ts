@@ -34,8 +34,10 @@ export class Diamond {
         return new Array(spaces + 1).join(' ');
     }
 
-    getIndexOf(): number {
-        return 1;
+    getIndexOf(letter: string): number {
+        const charCodeA = 'A'.charCodeAt(0);
+        const charCode = letter.charCodeAt(0);
+        return charCode - charCodeA + 1;
     }
 
 }
