@@ -59,6 +59,10 @@ describe('Print Diamond', () => {
             expect(diamond.getAlphabetIndex('A')).toEqual(1);
         });
 
+         it('should return 26, if Z is provided', () => {
+            expect(diamond.getAlphabetIndex('Z')).toEqual(26);
+        });
+
     });
 
 });
