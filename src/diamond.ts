@@ -15,20 +15,15 @@ export class Diamond {
     }
 
     innerSpace(letter: string): string {
-        const isValidLetter = /^[A-Z]$/.test(letter);
-        if (!isValidLetter)
-            throw new Error('Invalid Argument');
+        const index = this.getAlphabetIndexOf(letter);
 
-        const charCode = letter.charCodeAt(0);
-        const charCodeA = 'A'.charCodeAt(0);
-        const index = charCode - charCodeA;
-        const spaces = 2 * index - 1;
+        const spaces = 2 * (index - 1) - 1;
         return new Array(spaces + 1).join(' ');
     }
 
     outerSpace(current: string, widest: string): string {
-        const currentIndex = current.charCodeAt(0);
-        const widestIndex = widest.charCodeAt(0);
+        const currentIndex = this.getAlphabetIndexOf(current);
+        const widestIndex = this.getAlphabetIndexOf(widest);
 
         const spaces = widestIndex - currentIndex;
         return new Array(spaces + 1).join(' ');
