@@ -47,6 +47,10 @@ describe('Print Diamond', () => {
             expect(diamond.outerSpace('C', 'E')).toEqual('  ');
         });
 
+        it('should throw an exception, if it is called with D and C', () => {
+            expect(() => diamond.outerSpace('E', 'B')).toThrow('Invalid combination of arguments');
+        });
+
     });
 
     describe('Alphabet Index', () => {
