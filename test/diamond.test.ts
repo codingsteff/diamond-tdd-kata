@@ -53,10 +53,10 @@ describe('Print Diamond', () => {
 
     });
 
-    describe('Get Index Of', () => {
+    describe('Get Alphabet Index', () => {
 
         it('should return 1, if A is provided', () => {
-            expect(diamond.getIndexOf('A')).toEqual(1);
+            expect(diamond.getAlphabetIndex('A')).toEqual(1);
         });
 
     });
