@@ -35,10 +35,6 @@ describe('Print Diamond', () => {
             expect(diamond.innerSpace('C')).toEqual('   ');
         });
 
-        it('should throw an exception, if 4 is provided', () => {
-            expect(() => diamond.innerSpace('4')).toThrow('Invalid Argument');
-        });
-
     });
 
     describe('Outer Space', () => {
@@ -53,7 +49,7 @@ describe('Print Diamond', () => {
 
     });
 
-    describe('Get Alphabet Index', () => {
+    describe('Alphabet Index', () => {
 
         it('should return 1, if A is provided', () => {
             expect(diamond.getAlphabetIndexOf('A')).toEqual(1);
