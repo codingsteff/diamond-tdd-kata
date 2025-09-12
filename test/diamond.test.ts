@@ -56,15 +56,15 @@ describe('Print Diamond', () => {
     describe('Get Alphabet Index', () => {
 
         it('should return 1, if A is provided', () => {
-            expect(diamond.getAlphabetIndex('A')).toEqual(1);
+            expect(diamond.getAlphabetIndexOf('A')).toEqual(1);
         });
 
         it('should return 26, if Z is provided', () => {
-            expect(diamond.getAlphabetIndex('Z')).toEqual(26);
+            expect(diamond.getAlphabetIndexOf('Z')).toEqual(26);
         });
 
         it('should throw an exception, if 4 is provided', () => {
-            expect(() => diamond.getAlphabetIndex('4')).toThrow('Invalid Argument');
+            expect(() => diamond.getAlphabetIndexOf('4')).toThrow('Invalid Argument');
         });
 
     });

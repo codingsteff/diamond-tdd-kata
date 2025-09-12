@@ -34,7 +34,7 @@ export class Diamond {
         return new Array(spaces + 1).join(' ');
     }
 
-    getAlphabetIndex(letter: string): number {
+    getAlphabetIndexOf(letter: string): number {
         const isValidLetter = /^[A-Z]$/.test(letter);
         if (!isValidLetter)
             throw new Error('Invalid Argument');
