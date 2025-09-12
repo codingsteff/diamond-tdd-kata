@@ -35,6 +35,10 @@ export class Diamond {
     }
 
     getAlphabetIndex(letter: string): number {
+        const isValidLetter = /^[A-Z]$/.test(letter);
+        if (!isValidLetter)
+            throw new Error('Invalid Argument');
+
         const charCodeA = 'A'.charCodeAt(0);
         const charCode = letter.charCodeAt(0);
         return charCode - charCodeA + 1;
