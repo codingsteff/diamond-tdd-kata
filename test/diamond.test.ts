@@ -3,7 +3,7 @@ import { Diamond } from '../src/diamond';
 
 describe('Print Diamond', () => {
 
-    var diamond;
+    let diamond: any;
 
     beforeEach(() => {
         diamond = new Diamond('A');

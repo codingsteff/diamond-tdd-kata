@@ -10,11 +10,11 @@ export class Diamond {
         return this._letter;
     }
 
-    line(letter): string {
+    line(letter: string): string {
         return letter;
     }
 
-    innerSpace(letter): string {
+    innerSpace(letter: string): string {
         const isValidLetter = /^[A-Z]$/.test(letter);
         if (!isValidLetter)
             throw new Error('Invalid Argument');
@@ -26,11 +26,11 @@ export class Diamond {
         return new Array(spaces + 1).join(' ');
     }
 
-    outerSpace(current, widest): string {
-        var currentIndex = current.charCodeAt(0);
-        var widestIndex = widest.charCodeAt(0);
+    outerSpace(current: string, widest: string): string {
+        const currentIndex = current.charCodeAt(0);
+        const widestIndex = widest.charCodeAt(0);
 
-        var spaces = widestIndex - currentIndex;
+        const spaces = widestIndex - currentIndex;
         return new Array(spaces + 1).join(' ');
     }
 
