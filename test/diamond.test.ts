@@ -20,7 +20,7 @@ describe('Print Diamond', () => {
         });
 
         it('should return the line for D if D is the widest point', () => {
-            expect(diamond.line('D', 'D')).toEqual('D    D');
+            expect(diamond.line('D', 'D')).toEqual('D     D');
         });
 
     });
