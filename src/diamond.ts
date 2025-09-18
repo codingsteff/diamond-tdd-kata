@@ -10,6 +10,10 @@ export class Diamond {
         return this._letter;
     }
 
+    upperHalf(widest: string): string {
+        return ' A\nB B'
+    }
+
     line(current: string, widest: string): string {
         const outerSpace = this.outerSpace(current, widest);
         const innerSpace = this.innerSpace(current);
