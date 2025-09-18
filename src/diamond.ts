@@ -11,7 +11,15 @@ export class Diamond {
     }
 
     line(current: string, widest: string): string {
-        return ' C   C';
+        const outerSpace = this.outerSpace(current, widest);
+        const innerSpace = this.innerSpace(current);
+
+        let line = outerSpace + current;
+
+        if (innerSpace)
+            line += innerSpace + current;
+
+        return line;
     }
 
     innerSpace(letter: string): string {
