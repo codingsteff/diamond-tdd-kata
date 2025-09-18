@@ -10,8 +10,8 @@ export class Diamond {
         return this._letter;
     }
 
-    line(letter: string): string {
-        return letter;
+    line(current: string, widest: string): string {
+        return ' C   C';
     }
 
     innerSpace(letter: string): string {
