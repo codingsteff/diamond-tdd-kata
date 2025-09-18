@@ -23,6 +23,10 @@ describe('Print Diamond', () => {
             expect(diamond.line('D', 'D')).toEqual('D     D');
         });
 
+        it('should return the line for A if B is the widest point', () => {
+            expect(diamond.line('A', 'B')).toEqual(' A');
+        });
+
     });
 
     describe('Inner Space', () => {
