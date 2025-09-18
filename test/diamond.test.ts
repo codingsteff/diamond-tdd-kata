@@ -15,8 +15,8 @@ describe('Print Diamond', () => {
 
     describe('Line', () => {
 
-        it('should return the line for letter A', () => {
-            expect(diamond.line('A')).toEqual('A');
+        it('should return the line for C if D is the widest point', () => {
+            expect(diamond.line('C', 'D')).toEqual(' C   C');
         });
 
     });
