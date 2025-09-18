@@ -22,11 +22,11 @@ export class Diamond {
     }
 
     outerSpace(current: string, widest: string): string {
-        if (current === 'E' && widest === 'B')
-            throw new Error('Invalid combination of arguments');
-
         const currentIndex = this.getAlphabetIndexOf(current);
         const widestIndex = this.getAlphabetIndexOf(widest);
+
+        if (currentIndex > widestIndex)
+            throw new Error('Invalid combination of arguments');
 
         const spaces = widestIndex - currentIndex;
         return new Array(spaces + 1).join(' ');
