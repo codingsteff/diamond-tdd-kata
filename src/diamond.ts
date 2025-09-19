@@ -11,7 +11,10 @@ export class Diamond {
             return this._letter;
         }
 
-        return '  A\n B B\nC   C\n B B\n  A';
+        const upperDiamond = this.upperHalf(this._letter);
+        const lowerDiamond = this.lowerHalf(this._letter);
+
+        return upperDiamond + '\n' + lowerDiamond;
     }
 
     upperHalf(widest: string): string {
