@@ -1,9 +1,11 @@
 export class Diamond {
 
     private _letter: string;
+    private _charCodeA: number;
 
     constructor(letter: string) {
         this._letter = letter;
+        this._charCodeA = 'A'.charCodeAt(0);
     }
 
     toString(): string {
@@ -21,7 +23,7 @@ export class Diamond {
         const lines = [];
         const widestIndex = this.getAlphabetIndexOf(widest);
         for (let i = 0; i < widestIndex; i++) {
-            const currentLetter = String.fromCharCode('A'.charCodeAt(0) + i);
+            const currentLetter = String.fromCharCode(this._charCodeA + i);
             lines.push(this.line(currentLetter, widest));
         }
         return lines.join('\n');
@@ -31,7 +33,7 @@ export class Diamond {
         const lines = [];
         const widestIndex = this.getAlphabetIndexOf(widest); // -2 to skip the widest line
         for (let i = widestIndex - 2; i >= 0; i--) {
-            const currentLetter = String.fromCharCode('A'.charCodeAt(0) + i);
+            const currentLetter = String.fromCharCode(this._charCodeA + i);
             lines.push(this.line(currentLetter, widest));
         }
         return lines.join('\n');
@@ -72,9 +74,8 @@ export class Diamond {
         if (!isValidLetter)
             throw new Error('Invalid Argument');
 
-        const charCodeA = 'A'.charCodeAt(0);
         const charCode = letter.charCodeAt(0);
-        return charCode - charCodeA + 1;
+        return charCode - this._charCodeA + 1;
     }
 
 }
