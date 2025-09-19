@@ -22,8 +22,8 @@ export class Diamond {
 
     lowerHalf(widest: string): string {
         const lines = [];
-        const widestIndex = this.getAlphabetIndexOf(widest);
-        for (let i = widestIndex - 1; i >= 0; i--) {
+        const widestIndex = this.getAlphabetIndexOf(widest); // -2 to skip the widest line
+        for (let i = widestIndex - 2; i >= 0; i--) {
             const currentLetter = String.fromCharCode('A'.charCodeAt(0) + i);
             lines.push(this.line(currentLetter, widest));
         }
