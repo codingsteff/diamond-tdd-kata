@@ -12,7 +12,8 @@ export class Diamond {
 
     upperHalf(widest: string): string {
         const lines = [];
-        for (let i = 0; i < this.getAlphabetIndexOf(widest); i++) {
+        const widestIndex = this.getAlphabetIndexOf(widest);
+        for (let i = 0; i < widestIndex; i++) {
             const currentLetter = String.fromCharCode('A'.charCodeAt(0) + i);
             lines.push(this.line(currentLetter, widest));
         }
@@ -20,7 +21,13 @@ export class Diamond {
     }
 
     lowerHalf(widest: string): string {
-        return ' B B\n  A';
+        const lines = [];
+        const widestIndex = this.getAlphabetIndexOf(widest);
+        for (let i = widestIndex - 1; i >= 0; i--) {
+            const currentLetter = String.fromCharCode('A'.charCodeAt(0) + i);
+            lines.push(this.line(currentLetter, widest));
+        }
+        return lines.join('\n');
     }
 
     line(current: string, widest: string): string {
