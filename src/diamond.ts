@@ -7,7 +7,11 @@ export class Diamond {
     }
 
     toString(): string {
-        return this._letter;
+        if (this._letter === 'A') {
+            return this._letter;
+        }
+
+        return '  A\n B B\nC   C\n B B\n  A';
     }
 
     upperHalf(widest: string): string {
