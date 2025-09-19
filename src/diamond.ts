@@ -19,6 +19,10 @@ export class Diamond {
         return lines.join('\n');
     }
 
+    lowerHalf(widest: string): string {
+        return ' B B\n  A';
+    }
+
     line(current: string, widest: string): string {
         const outerSpace = this.outerSpace(current, widest);
         const innerSpace = this.innerSpace(current);
