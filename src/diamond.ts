@@ -11,7 +11,12 @@ export class Diamond {
     }
 
     upperHalf(widest: string): string {
-        return ' A\nB B'
+        const lines = [];
+        for (let i = 0; i < this.getAlphabetIndexOf(widest); i++) {
+            const currentLetter = String.fromCharCode('A'.charCodeAt(0) + i);
+            lines.push(this.line(currentLetter, widest));
+        }
+        return lines.join('\n');
     }
 
     line(current: string, widest: string): string {
