@@ -13,6 +13,11 @@ describe('Print Diamond', () => {
         expect(diamond.toString()).toEqual('A');
     });
 
+     it('should return diamond, if C is provided', () => {
+        diamond = new Diamond('C');
+        expect(diamond.toString()).toEqual('  A\n B B\nC   C\n B B\n  A');
+    });
+
     describe('Upper Half', () => {
 
         it('should return the upper half of the diamond if B is the widest point', () => {
