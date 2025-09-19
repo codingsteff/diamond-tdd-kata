@@ -31,6 +31,10 @@ describe('Print Diamond', () => {
             expect(diamond.lowerHalf('B')).toEqual('B B\n A');
         });
 
+        it('should return the lower half of the diamond if C is the widest point', () => {
+            expect(diamond.lowerHalf('C')).toEqual('C   C\n B B\n  A');
+        });
+
     });
 
 
