@@ -20,23 +20,23 @@ export class Diamond {
     }
 
     upperHalf(widest: string): string {
+        return this.half(widest).join('\n');
+    }
+
+    lowerHalf(widest: string): string {
+        const half = this.half(widest);
+        // Reverse array, but ignore widest line
+        return half.reverse().slice(1).join('\n');
+    }
+
+    private half(widest: string): string[] {
         const lines = [];
         const widestIndex = this.getAlphabetIndexOf(widest);
         for (let i = 0; i < widestIndex; i++) {
             const currentLetter = String.fromCharCode(this._charCodeA + i);
             lines.push(this.line(currentLetter, widest));
         }
-        return lines.join('\n');
-    }
-
-    lowerHalf(widest: string): string {
-        const lines = [];
-        const widestIndex = this.getAlphabetIndexOf(widest); // -2 to skip the widest line
-        for (let i = widestIndex - 2; i >= 0; i--) {
-            const currentLetter = String.fromCharCode(this._charCodeA + i);
-            lines.push(this.line(currentLetter, widest));
-        }
-        return lines.join('\n');
+        return lines;
     }
 
     line(current: string, widest: string): string {
